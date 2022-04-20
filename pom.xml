@@ -15,6 +15,7 @@
 	<sonar.organization>nivetha-m</sonar.organization>
 	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	<sonar.login>e9551b5d61cba3d58cc86fc94ba0148717786c67</sonar.login>
+	<sonar.coverage.jacoco.xmlReportPaths>./report-aggregate/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
   </properties>
 
   <modules>
@@ -59,8 +60,6 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.5</version>
                 <configuration>
-                    <destFile>${basedir}/target/jacoco-unit.exec</destFile>
-                    <dataFile>${basedir}/target/jacoco-unit.exec</dataFile>
                     <excludes>
                         <exclude>**/Reverse*/**</exclude>
                         <exclude>**/routes.*</exclude>
